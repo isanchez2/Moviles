@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tarjetas</string>
+    <string name="question_text">Tree</string>
+    <string name="answer_text">Árbol</string>
+    <string name="answer_button_text">Ver respuesta</string>
+
+    <string name="easy_button_title">FÁCIL</string>
+    <string name="doubt_button_title">DUDO</string>
+    <string name="difficult_button_title">DIFÍCIL</string>
+</resources>
