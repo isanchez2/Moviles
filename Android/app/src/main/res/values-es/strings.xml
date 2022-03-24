@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tarjetas</string>
+    <string name="subtitle_text">Toca para estudiar</string>
     <string name="question_text">Tree</string>
     <string name="answer_text">Árbol</string>
     <string name="answer_button_text">Ver respuesta</string>
@@ -8,4 +9,8 @@
     <string name="easy_button_title">FÁCIL</string>
     <string name="doubt_button_title">DUDO</string>
     <string name="difficult_button_title">DIFÍCIL</string>
+
+    <string name="empty_cards">No hay tarjetas para repasar</string>
+    <string name="info_text_view_message">Número de tarjetas restantes</string>
+    <string name="due_cards_format">Quedan %d tarjetas</string>
 </resources>

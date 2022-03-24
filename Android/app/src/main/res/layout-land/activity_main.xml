@@ -6,13 +6,24 @@
     <data>
         <import type="android.view.View"/>
         <variable
-            name="card"
-            type="es.uam.eps.dadm.cards.Card" />
+            name="viewModel"
+            type="es.uam.eps.dadm.cards.MainViewModel" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="@{viewModel.card != null ? View.VISIBLE : View.INVISIBLE}">
+
+        <TextView
+            android:id="@+id/info_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/due_cards_format(viewModel.nDueCards)}"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            tools:text="@string/info_text_view_message" />
 
         <TextView
             android:id="@+id/question_text_view"
@@ -20,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:textSize="20dp"
-            android:text="@{card.question}"
+            android:text="@{viewModel.card.question}"
             tools:text="Question text" />
 
         <View
@@ -30,7 +41,7 @@
             android:layout_marginVertical="10dp"
             android:layout_marginHorizontal="30dp"
             android:layout_height="1dp"
-            android:visibility="@{card.answered ? View.VISIBLE : View.INVISIBLE}"
+            android:visibility="@{viewModel.card.answered ? View.VISIBLE : View.INVISIBLE}"
             android:background="@android:color/darker_gray"/>
 
         <TextView
@@ -39,9 +50,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_below="@id/separator"
-            android:visibility="@{card.answered ? View.VISIBLE : View.INVISIBLE}"
+            android:visibility="@{viewModel.card.answered ? View.VISIBLE : View.INVISIBLE}"
             android:textSize="20dp"
-            android:text="@{card.answer}"
+            android:text="@{viewModel.card.answer}"
             tools:text="Answer text" />
 
         <Button
@@ -50,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_below="@id/answer_text_view"
-            android:visibility="@{card.answered ? View.INVISIBLE : View.VISIBLE}"
+            android:visibility="@{viewModel.card.answered ? View.INVISIBLE : View.VISIBLE}"
             android:text="@string/answer_button_text" />
 
         <LinearLayout
@@ -59,7 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:visibility="@{card.answered ? View.VISIBLE : View.INVISIBLE}">
+            android:layout_marginBottom="10dp"
+            android:visibility="@{viewModel.card.answered ? View.VISIBLE : View.INVISIBLE}">
 
             <Button
                 android:id="@+id/difficult_button"
@@ -67,8 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:backgroundTint="@color/red"
-                android:text="@string/difficult_button_title"
-                android:onClick="@{() -> card.update_card(0)}">
+                android:text="@string/difficult_button_title">
             </Button>
             <Button
                 android:id="@+id/doubt_button"
@@ -76,8 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/blue"
-                android:text="@string/doubt_button_title"
-                android:onClick="@{() -> card.update_card(3)}">
+                android:text="@string/doubt_button_title">
             </Button>
             <Button
                 android:id="@+id/easy_button"
@@ -85,8 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:backgroundTint="@color/green"
-                android:text="@string/easy_button_title"
-                android:onClick="@{() -> card.update_card(5)}">
+                android:text="@string/easy_button_title">
             </Button>
         </LinearLayout>
 

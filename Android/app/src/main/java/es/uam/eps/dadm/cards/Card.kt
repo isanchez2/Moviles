@@ -1,6 +1,7 @@
 package es.uam.eps.dadm.cards
 
 import android.view.View
+import timber.log.Timber
 import java.time.LocalDateTime
 import java.util.*
 import kotlin.math.max
@@ -62,7 +63,7 @@ open class Card(question: String, answer: String) {
                 "|${interval.toString()}|$nextPracticeDate"
     }
 
-    fun update_from_view(view: View) {
+    fun updateFromView(view: View) {
         quality = when(view.id) {
             R.id.easy_button -> 5
             R.id.doubt_button -> 3
@@ -75,6 +76,10 @@ open class Card(question: String, answer: String) {
     fun update_card(quality: Int) {
         this.quality = quality
         update(LocalDateTime.now())
+    }
+
+    fun isDue(date: LocalDateTime): Boolean {
+        return nextPracticeDate <= date.toString()
     }
 
     companion object {
