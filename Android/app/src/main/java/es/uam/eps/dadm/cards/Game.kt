@@ -1,11 +1,8 @@
 package es.uam.eps.dadm.cards
 
-import java.io.File
-import java.io.FileNotFoundException
-
 class Game {
     private var decks = mutableListOf<Deck>()
-
+    /*
     fun listDecks() {
         if (decks.isEmpty()) {
             println("\tNo hay mazos disponibles")
@@ -123,5 +120,5 @@ class Game {
         } catch (e: FileNotFoundException) {
             println("\tNo se ha encontrado el fichero")
         }
-    }
+    } */
 }

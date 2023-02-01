@@ -1,6 +1,6 @@
 package es.uam.eps.dadm.cards
 
-class Cloze(question: String, answer: String): Card(question, answer) {
+class Cloze(question: String, answer: String, deckId: String, userId: String): Card(question, answer, deckId, userId) {
     override fun show(modificacion: Boolean) {
         print("\t$question (INTRO para ver respuesta) ")
         val time1 = System.currentTimeMillis()
@@ -20,7 +20,7 @@ class Cloze(question: String, answer: String): Card(question, answer) {
             throw Exception("Número incorrecto")
         }
         val answerTime = (time2-time1)/1000.0
-        answerTimes.add(answerTime)
+        /* answerTimes.add(answerTime) */
     }
 
     override fun toString(): String {
@@ -28,6 +28,7 @@ class Cloze(question: String, answer: String): Card(question, answer) {
     }
 
     companion object {
+        /*
         fun fromString(cad: String): Cloze {
             val trozos = cad.split("|")
             val question = trozos[1]
@@ -41,6 +42,6 @@ class Cloze(question: String, answer: String): Card(question, answer) {
             cloze.nextPracticeDate = trozos[8]
             cloze.answered = false
             return cloze
-        }
+        } */
     }
 }

@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="es.uam.eps.dadm.cards.MainViewModel" />
+            type="es.uam.eps.dadm.cards.StudyViewModel" />
     </data>
 
     <RelativeLayout
@@ -57,8 +57,9 @@
 
         <Button
             android:id="@+id/answer_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:layout_below="@id/answer_text_view"
             android:visibility="@{viewModel.card.answered ? View.INVISIBLE : View.VISIBLE}"
             android:text="@string/answer_button_text" />

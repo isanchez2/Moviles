@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tarjetas</string>
-    <string name="subtitle_text">Toca para estudiar</string>
+    <string name="subtitle_text">Toca para jugar</string>
+    <string name="list_cards">Lista de tarjetas</string>
+    <string name="create_card">Create card</string>
     <string name="question_text">Tree</string>
     <string name="answer_text">Árbol</string>
     <string name="answer_button_text">Ver respuesta</string>
+    <string name="button_rewiew_cards">Repasar tarjetas</string>
+    <string name="button_card_details">Detalles</string>
 
     <string name="easy_button_title">FÁCIL</string>
     <string name="doubt_button_title">DUDO</string>
@@ -13,4 +17,167 @@
     <string name="empty_cards">No hay tarjetas para repasar</string>
     <string name="info_text_view_message">Número de tarjetas restantes</string>
     <string name="due_cards_format">Quedan %d tarjetas</string>
+
+    <!-- Edit card fragment -->
+    <string name="card_edit_title">Editar tarjeta</string>
+    <string name="create_card_hint_question">Escribe el nombre de la pregunta</string>
+    <string name="create_card_question">Pregunta</string>
+    <string name="create_card_hint_answer">Escribe el nombre de la respuesta</string>
+    <string name="create_card_answer">Respuesta</string>
+    <string name="card_edit_accept_button">ACEPTAR</string>
+    <string name="card_edit_cancel_button">CANCELAR</string>
+    <string name="card_edit_delete_button">ELIMINAR</string>
+    <string name="card_edit_toast">Pregunta o respuesta vacía</string>
+
+    <!-- Edit deck fragment -->
+    <string name="deck_edit_toast">Nombre vacío</string>
+
+    <string name="new_card_fab_description">Descripcion</string>
+    <string name="added_card">Tarjeta añadida</string>
+
+    <string name="home_nav_menu_title">Inicio</string>
+    <string name="decks_nav_menu_title">Mazos</string>
+    <string name="study_nav_menu_title">Repasar tarjetas</string>
+    <string name="statistics_nav_menu_title">Estadísticas</string>
+    <string name="about_nav_menu_title">Acerca de la aplicación</string>
+    <string name="tutorial_nav_menu_title">Tutorial</string>
+
+    <!-- About fragment -->
+    <string name="about_title">TARJETAS</string>
+    <string name="about_author_data_version">
+        Producido por Iván Sánchez Franco\n
+        ivan.sanchezf@estudiante.uam.es\n
+        Versión app: 1.0.0
+    </string>
+    <string name="about_description_app1">
+        Aprende idiomas mientras juegas con tu teléfono de manera sencilla.
+        Esta aplicación te permitirá crear tus propios mazos donde almacenarás idiomas,
+        crear y modificar tarjetas de cada mazo y repasarlas cada día.
+    </string>
+    <string name="about_description_app2">
+       Cada tarjeta se compone de una pregunta y una respuesta y, al completarla,
+        deberás indicar su dificultad para que aparezcan días distintos dependiendo de tu
+        respuesta.
+    </string>
+    <string name="about_description_app3">
+        No hay nada mejor para estudiar que estudiar jugando! Aprende idiomas mientras disfrutas!
+    </string>
+    <string name="about_button">Jugar</string>
+
+    <!-- Card details fragment -->
+    <string name="card_details_title">Detalles de tarjeta</string>
+    <string name="card_details_next_practice_date">Próxima fecha de práctica: </string>
+    <string name="card_details_easiness">Facilidad: </string>
+    <string name="card_details_repetitions">Repeticiones: </string>
+    <string name="card_details_interval">Días para próximo repaso: </string>
+    <string name="card_details_num_answers">Número de respuestas: </string>
+    <string name="card_details_back_button">Atrás</string>
+
+    <!-- Deck list fragment -->
+    <string name="list_decks">Lista de mazos</string>
+    <string name="new_deck_fab_description">Descripción</string>
+    <string name="button_deck_cards">Tarjetas</string>
+    <string name="statistics_fab_description">Descripción</string>
+
+    <!-- Deck edit fragment -->
+    <string name="deck_edit_title">Editar mazo</string>
+    <string name="create_deck_name">Nombre</string>
+    <string name="create_deck_hint_question">Escribe el nombre del mazo</string>
+    <string name="deck_edit_cancel_button">CANCELAR</string>
+    <string name="deck_edit_accept_button">ACEPTAR</string>
+    <string name="deck_edit_delete_button">ELIMINAR</string>
+
+    <!-- Statistics fragment -->
+    <string name="statistics">Estadísticas</string>
+    <string name="statistics_general_title">Estadísticas generales</string>
+    <string name="statistics_num_decks">Número total de mazos: </string>
+    <string name="statistics_num_cards">Número total de tarjetas: </string>
+    <string name="statistics_easiness_med">Facilidad media: </string>
+    <string name="statistics_interval_med">Intervalo medio: %d días</string>
+    <string name="statistics_num_reviews">Repasos totales: %d</string>
+    <string name="statistics_num_different_answers">Número de cartas diferentes repasadas: %d</string>
+    <string name="statistics_difficult_cards">Cartas en nivel difícil: %d</string>
+    <string name="statistics_doubt_cards">Cartas en nivel dudo: %d</string>
+    <string name="statistics_easy_cards">Cartas en nivel fácil: %d</string>
+    <!-- Deck statistics fragment -->
+    <string name="statistics_deck_title">Estadísticas de mazo</string>
+    <string name="deck_statistics_num_cards">Número total de tarjetas: %d</string>
+    <string name="deck_statistics_easiness_med">Facilidad media: %f</string>
+    <string name="deck_statistics_interval_med">Intervalo medio: %d días</string>
+    <string name="deck_statistics_interval_max">Intervalo máximo: %d días</string>
+    <string name="deck_statistics_reviews">Repasos totales: %d</string>
+    <string name="deck_statistics_difficult_cards">Cartas en nivel difícil: %d</string>
+    <string name="deck_statistics_doubt_cards">Cartas en nivel dudo: %d</string>
+    <string name="deck_statistics_easy_cards">Cartas en nivel fácil: %d</string>
+    <string name="deck_statistics_title_graph">Gráfico de dificultad de tarjetas</string>
+
+    <!-- Tutorial fragment -->
+    <string name="tutorial_title">Tutorial</string>
+    <string name="tutorial_decks">
+        En la pestaña de mazos es donde se almacenan todos los mazos disponibles por el
+        usuario. El usuario podrá crear nuevos mazos pulsando sobre el botón de la
+        esquina inferior derecha. Aquí, dicho mazo podrá ser eliminado o editado,
+        introduciendo un nuevo nombre al hacer click sobre el mazo deseado.
+        También, el usuario tendrá la posibilidad de ver todas las cartas de ese mazo
+        haciendo click en el botón "Cards".
+    </string>
+    <string name="tutorial_cards">
+        La pantalla de tarjetas contiene el listado de tarjetas que tiene el mazo
+        seleccionado en la anterior pantalla. Por cada tarjeta se puede visualizar
+        la pregunta y la respuesta de dicha tarjeta. Si el usuario pulsa sobre la
+        tarjeta podrá editarla, pudiendo cambiar su pregunta y/o respuesta. Además,
+        podrá crear nuevas tarjetas pulsando sobre el icono situado en la esquina
+        inferior derecha. Estas tarjetas se crearán dentro del mazo seleccionado.
+        También tendrá acceso a los detalles de la tarjeta, tales como la próxima
+        fecha de repaso, la facilidad o el número de respuestas. Pulsando el botón de
+        la esquina inferior izquierda el usuario podrá acceder a las estadísticas
+        del mazo en concreto.
+    </string>
+    <string name="tutorial_study_cards">
+        En esta pantalla el usuario podrá estudiar las tarjetas que tenga pendientes
+        cada día. Mientras queden tarjetas, irán apareciendo paulatinamente en las que
+        el usuario tendrá que indicar la dificultad de la tarjeta, es decir, lo que le
+        ha costado averiguar su significado. Se mostrarán 3 botones (difícil, dudo y fácil),
+        uno por dificultad. En este repaso estarán presentes las tarjetas de todos los mazos.
+    </string>
+    <string name="tutorial_statistics">
+        Aquí el usuario podrá obtener una perspectiva global de sus estadísticas generales,
+        tales como el número de tarjetas y mazos totales, numerosos datos de interés, así
+        como algunas gráficas que le ayudarán a comprender su nivel de aprendizaje en la
+        aplicación.
+    </string>
+    <string name="tutorial_about">
+        La pestaña About consta de una breve información acerca de la aplicación, así como
+        el desarrollador y su versión.
+    </string>
+
+    <string name="settings_menu_title">Ajustes</string>
+    <string name="logout_menu_title">Salir</string>
+    <string name="upload_menu_title">Subida de datos a Firebase</string>
+    <string name="download_menu_title">Bajada de datos de Firebase</string>
+
+    <!-- Preferences -->
+    <string name="decks_header">Mazos</string>
+    <string name="max_number_cards">Número máximo de tarjetas</string>
+    <string name="board_title">Mostrar pizarra</string>
+    <string name="board_summary_on">Pizarra disponible</string>
+    <string name="board_summary_off">Pizarra no disponible</string>
+    <string name="data_header">Almacenamiento de datos</string>
+    <string name="data_title">Subida de datos automática</string>
+    <string name="data_firebase_on">Activada conexión a Firebase</string>
+    <string name="data_firebase_off">Desactivada conexión a Firebase</string>
+    <string name="title_activity_settings">Ajustes</string>
+
+    <!-- Login -->
+    <string name="email_hint">Correo</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="sign_in_button">Iniciar sesión</string>
+    <string name="create_account_button">Crear cuenta</string>
+    <string name="login_failed_empty">Email o contraseña vacías</string>
+    <string name="login_failed_error">Credenciales incorrectas</string>
+
+    <!-- Uploading / downloading -->
+    <string name="firebase_uploading">Subiendo a Firebase…</string>
+    <string name="firebase_downloading">Descargando de Firebase…</string>
+
 </resources>

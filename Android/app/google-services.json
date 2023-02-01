@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "934301645456",
+    "firebase_url": "https://ivansanchezfrancocards-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ivansanchezfrancocards",
+    "storage_bucket": "ivansanchezfrancocards.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934301645456:android:4b350303c4f16064f7f615",
+        "android_client_info": {
+          "package_name": "es.uam.eps.dadm.cards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934301645456-fk97i7m7nnos98kmjrkb2aovsak1o143.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.uam.eps.dadm.cards",
+            "certificate_hash": "f1913430380771ec1db80874dd862b14f30c584e"
+          }
+        },
+        {
+          "client_id": "934301645456-j95ht2ecass13alcfabfrol3b8c4tv13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdXNTWEyOEldqokYWoALMVJ-caRxrddgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934301645456-j95ht2ecass13alcfabfrol3b8c4tv13.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

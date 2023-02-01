@@ -1,18 +1,27 @@
 package es.uam.eps.dadm.cards
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.*
-import java.io.File
-import java.io.FileNotFoundException
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
-class Deck(name: String) {
-    var name: String = name
-    var id: String = UUID.randomUUID().toString()
-    var cards = mutableListOf<Card>()
+@Entity(tableName = "decks_table")
+data class Deck(
+    var name: String,
+    var userId: String,
+    @PrimaryKey val deckId: String = UUID.randomUUID().toString()
+    ) {
+    /* var cards = mutableListOf<Card>() */
+    var createdBefore: Boolean = true
     var forgottenCards: Int = 0
     var firstAnswerCorrect: Int = 0
 
+    constructor() : this(
+        "nombre",
+        "userId",
+        "deckId"
+    )
+
+    /*
     fun addCard() {
         println("Añadiendo tarjeta al mazo ${this.name}:")
         print("\tTeclea el tipo (0 -> es.uam.eps.dadm.cards.Card // 1 -> es.uam.eps.dadm.cards.Cloze // 2 -> es.uam.eps.dadm.cards.Definition): ")
@@ -231,5 +240,5 @@ class Deck(name: String) {
             deck.id = trozos[1]
             return deck
         }
-    }
+    } */
 }

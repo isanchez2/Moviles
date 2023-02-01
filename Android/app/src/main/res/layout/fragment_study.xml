@@ -7,13 +7,14 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="es.uam.eps.dadm.cards.MainViewModel" />
+            type="es.uam.eps.dadm.cards.StudyViewModel" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="@{viewModel.card != null ? View.VISIBLE : View.INVISIBLE}">
+        android:visibility="@{viewModel.card != null ? View.VISIBLE : View.INVISIBLE}"
+        android:background="@color/black">
 
         <TextView
             android:id="@+id/info_text_view"
@@ -23,15 +24,28 @@
             android:text="@{@string/due_cards_format(viewModel.nDueCards)}"
             android:layout_marginTop="10dp"
             android:textSize="20sp"
+            android:textColor="@color/white"
             tools:text="@string/info_text_view_message" />
+
+        <es.uam.eps.dadm.cards.BoardView
+            android:id="@+id/board_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_text_view"
+            android:layout_above="@id/question_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:visibility="@{viewModel.board ? View.VISIBLE : View.INVISIBLE}"/>
 
         <TextView
             android:id="@+id/question_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="@{viewModel.card.question}"
+            android:textColor="@color/white"
             tools:text="Question text" />
 
         <View
@@ -42,7 +56,7 @@
             android:layout_marginHorizontal="30dp"
             android:layout_height="1dp"
             android:visibility="@{viewModel.card.answered ? View.VISIBLE : View.INVISIBLE}"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/white"/>
 
         <TextView
             android:id="@+id/answer_text_view"
@@ -51,17 +65,18 @@
             android:layout_centerInParent="true"
             android:layout_below="@id/separator"
             android:visibility="@{viewModel.card.answered ? View.VISIBLE : View.INVISIBLE}"
-            android:textSize="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
             android:text="@{viewModel.card.answer}"
             tools:text="Answer text" />
 
         <Button
             android:id="@+id/answer_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_below="@id/answer_text_view"
             android:visibility="@{viewModel.card.answered ? View.INVISIBLE : View.VISIBLE}"
+            android:backgroundTint="@color/init_app"
             android:text="@string/answer_button_text" />
 
         <LinearLayout

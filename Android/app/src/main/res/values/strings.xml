@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">Cards</string>
-    <string name="subtitle_text">Tap to study</string>
+    <string name="subtitle_text">Tap to play</string>
+    <string name="list_cards">List of cards</string>
+    <string name="create_card">Create card</string>
     <string name="question_text">Tree</string>
     <string name="answer_text">Árbol</string>
     <string name="answer_button_text">Check Answer</string>
+    <string name="button_rewiew_cards">Review Cards</string>
+    <string name="button_card_details">Details</string>
 
     <string name="easy_button_title">EASY</string>
     <string name="doubt_button_title">DOUBT</string>
@@ -13,7 +17,167 @@
     <string name="info_text_view_message">Number of remaining cards</string>
     <string name="due_cards_format">%d cards left</string>
 
-    <color name="red">#FE2D20</color>
-    <color name="blue">#20B9FE</color>
-    <color name="green">#008147</color>
+    <!-- Edit card fragment -->
+    <string name="card_edit_title">Edit card</string>
+    <string name="create_card_hint_question">Write the question text</string>
+    <string name="create_card_question">Question</string>
+    <string name="create_card_hint_answer">Write the answer text</string>
+    <string name="create_card_answer">Answer</string>
+    <string name="card_edit_accept_button">ACCEPT</string>
+    <string name="card_edit_cancel_button">CANCEL</string>
+    <string name="card_edit_delete_button">DELETE</string>
+    <string name="card_edit_toast">Empty question or answer</string>
+
+    <!-- Edit deck fragment -->
+    <string name="deck_edit_toast">Empty name</string>
+
+    <string name="new_card_fab_description">Description</string>
+    <string name="added_card">Card added</string>
+
+    <string name="home_nav_menu_title">Home</string>
+    <string name="decks_nav_menu_title">Decks</string>
+    <string name="study_nav_menu_title">Study cards</string>
+    <string name="statistics_nav_menu_title">Statistics</string>
+    <string name="about_nav_menu_title">About</string>
+    <string name="tutorial_nav_menu_title">Tutorial</string>
+
+    <!-- About fragment -->
+    <string name="about_title">CARDS</string>
+    <string name="about_author_data_version">
+        Powered by Iván Sánchez Franco\n
+        ivan.sanchezf@estudiante.uam.es\n
+        App version: 1.0.0
+    </string>
+    <string name="about_description_app1">
+        Learn languages while playing with your phone in a simple way.
+        This application will allow you to create your own decks where you will store languages,
+        create and modify cards from each deck and review them each day.
+    </string>
+    <string name="about_description_app2">
+        Each card consists of a question and an answer. When it has completed,
+        you must indicate its difficulty so that different days appear depending on your
+        answer.
+    </string>
+    <string name="about_description_app3">
+        There is nothing better to study than studying while playing! Learn languages while you enjoy!
+    </string>
+    <string name="about_button">Let\'s play</string>
+
+    <!-- Card details fragment -->
+    <string name="card_details_title">Card Details</string>
+    <string name="card_details_next_practice_date">Next practice date: </string>
+    <string name="card_details_easiness">Easiness: </string>
+    <string name="card_details_repetitions">Repetitions: </string>
+    <string name="card_details_interval">Remaining days to review: </string>
+    <string name="card_details_num_answers">Number of answers: </string>
+    <string name="card_details_back_button">Back</string>
+
+    <!-- Deck list fragment -->
+    <string name="list_decks">List of decks</string>
+    <string name="new_deck_fab_description">Description</string>
+    <string name="button_deck_cards">Cards</string>
+    <string name="statistics_fab_description">Description</string>
+
+    <!-- Deck edit fragment -->
+    <string name="deck_edit_title">Edit deck</string>
+    <string name="create_deck_name">Name</string>
+    <string name="create_deck_hint_question">Write the deck name</string>
+    <string name="deck_edit_cancel_button">CANCEL</string>
+    <string name="deck_edit_accept_button">ACCEPT</string>
+    <string name="deck_edit_delete_button">DELETE</string>
+
+    <!-- Statistics fragment -->
+    <string name="statistics">Statistics</string>
+    <string name="statistics_general_title">General statistics</string>
+    <string name="statistics_num_decks">Number of total decks: </string>
+    <string name="statistics_num_cards">Number of total cards: </string>
+    <string name="statistics_easiness_med">Average easiness: </string>
+    <string name="statistics_interval_med">Average interval: %d days</string>
+    <string name="statistics_num_reviews">Total reviews: %d</string>
+    <string name="statistics_num_different_answers">Different card reviews: %d</string>
+    <string name="statistics_difficult_cards">Difficult cards: %d</string>
+    <string name="statistics_doubt_cards">Doubt cards: %d</string>
+    <string name="statistics_easy_cards">Easy cards: %d</string>
+    <!-- Deck statistics fragment -->
+    <string name="statistics_deck_title">Deck statistics</string>
+    <string name="deck_statistics_num_cards">Number of total cards: %d</string>
+    <string name="deck_statistics_easiness_med">Average easiness: %f</string>
+    <string name="deck_statistics_interval_med">Average interval: %d days</string>
+    <string name="deck_statistics_interval_max">Max interval: %d days</string>
+    <string name="deck_statistics_reviews">Total reviews: %d</string>
+    <string name="deck_statistics_difficult_cards">Difficult cards: %d</string>
+    <string name="deck_statistics_doubt_cards">Doubt cards: %d</string>
+    <string name="deck_statistics_easy_cards">Easy cards: %d</string>
+    <string name="deck_statistics_title_graph">Card difficult chart</string>
+
+    <!-- Tutorial fragment -->
+    <string name="tutorial_title">Tutorial</string>
+    <string name="tutorial_decks">
+        The decks tab is where all the decks available by the player are stored.
+        The user can create new decks by clicking on the button on the
+        lower right corner. Here, deck can be deleted or edited,
+        entering a new name by clicking on the desired deck.
+        Also, the user will have the possibility to see all the cards of that deck
+        by clicking on the "Cards" button.
+    </string>
+    <string name="tutorial_cards">
+        The cards screen contains the list of cards that the deck has
+        selected on the previous screen. For each card you can see
+        the question and the answer on that card. If the user clicks on the
+        card you can edit it, being able to change your question and answer. Also,
+        you can create new cards by clicking on the icon located in the lower right
+        corner. These cards will be created within the selected deck.
+        You will also have access to card details, such as the next
+        review date, ease or number of responses. Pressing the button
+        the lower left corner the user will be able to access the statistics
+        of the particular deck.
+    </string>
+    <string name="tutorial_study_cards">
+        On this screen the user can study the cards that are pending
+        every day. As long as there are cards left, they will gradually appear in which
+        the user will have to indicate the difficulty of the card. 3 buttons will be
+        displayed (difficult, doubt and easy), one per difficulty. In this review
+        the cards of all the decks will be present.
+    </string>
+    <string name="tutorial_statistics">
+        Here the user will be able to obtain a global perspective of their general statistics,
+        such as the number of cards and total decks, numerous interesting data, as well as
+        some graphs that will help you understand your level of learning in the
+        application.
+    </string>
+    <string name="tutorial_about">
+        The About tab contains brief information about the application, as well as
+        the developer and the app version.
+    </string>
+
+    <!-- Menu -->
+    <string name="settings_menu_title">Settings</string>
+    <string name="logout_menu_title">Log Out</string>
+    <string name="upload_menu_title">Upload to Firebase</string>
+    <string name="download_menu_title">Download from Firebase</string>
+
+    <!-- Preferences -->
+    <string name="decks_header">Decks</string>
+    <string name="max_number_cards">Maximum number of cards</string>
+    <string name="board_title">Show board</string>
+    <string name="board_summary_on">Board available</string>
+    <string name="board_summary_off">Board unavailable</string>
+    <string name="data_header">Data storage</string>
+    <string name="data_title">Upload data automatically</string>
+    <string name="data_firebase_on">Activated connection to Firebase</string>
+    <string name="data_firebase_off">Deactivated connection to Firebase</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Login -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="login_failed_empty">Email or password empty</string>
+    <string name="login_failed_error">Authentication failed</string>
+
+    <!-- Uploading / downloading -->
+    <string name="firebase_uploading">Uploading to Firebase…</string>
+    <string name="firebase_downloading">Downloading from Firebase…</string>
+
 </resources>

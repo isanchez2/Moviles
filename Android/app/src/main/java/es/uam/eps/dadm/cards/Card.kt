@@ -1,24 +1,42 @@
 package es.uam.eps.dadm.cards
 
 import android.view.View
-import timber.log.Timber
 import java.time.LocalDateTime
 import java.util.*
 import kotlin.math.max
 import kotlin.math.roundToLong
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import androidx.room.ColumnInfo
 
-open class Card(question: String, answer: String) {
-    var question: String = question
-    var answer: String = answer
+@Entity(tableName = "cards_table")
+open class Card(
+    @ColumnInfo(name = "card_question")
+    var question: String,
+    var answer: String,
+    var deckId: String,
+    var userId: String,
+    var date: String = LocalDateTime.now().toString(),
+    @PrimaryKey var id: String = UUID.randomUUID().toString()
+    ) {
     var quality: Int = 0
-    var date: String = LocalDateTime.now().toString()
-    var id: String = UUID.randomUUID().toString()
     var repetitions: Int = 0
     var interval: Long = 1L
     var nextPracticeDate: String = date
     var easiness: Double = 2.5
-    var answerTimes: MutableList<Double> = mutableListOf<Double>()
+    /* var answerTimes: MutableList<Double> = mutableListOf<Double>() */
     var answered: Boolean = false
+    var numAnswers: Int = 0
+    var createdBefore: Boolean = true
+
+    constructor() : this(
+        "question",
+        "answer",
+        "0",
+        "userId",
+        LocalDateTime.now().toString(),
+        UUID.randomUUID().toString()
+    )
 
     open fun show(modificacion: Boolean) {
         print("\t$question (INTRO para ver respuesta) ")
@@ -37,7 +55,7 @@ open class Card(question: String, answer: String) {
             throw Exception("Número incorrecto")
         }
         val answerTime = (time2-time1)/1000.0
-        answerTimes.add(answerTime)
+        /* answerTimes.add(answerTime) */
     }
 
     fun update(currentDate: LocalDateTime) {
@@ -59,8 +77,8 @@ open class Card(question: String, answer: String) {
     }
 
     override fun toString(): String {
-        return "card|$question|$answer|$date|$id|${easiness.toString()}|${repetitions.toString()}" +
-                "|${interval.toString()}|$nextPracticeDate"
+        return "card|$question|$answer|$date|$id|${easiness}|${repetitions}" +
+                "|${interval}|$nextPracticeDate"
     }
 
     fun updateFromView(view: View) {
@@ -73,7 +91,7 @@ open class Card(question: String, answer: String) {
         update(LocalDateTime.now())
     }
 
-    fun update_card(quality: Int) {
+    fun updateCard(quality: Int) {
         this.quality = quality
         update(LocalDateTime.now())
     }
@@ -83,6 +101,7 @@ open class Card(question: String, answer: String) {
     }
 
     companion object {
+        /*
         fun fromString(cad: String): Card {
             val trozos = cad.split("|")
             var question = trozos[1]
@@ -96,6 +115,6 @@ open class Card(question: String, answer: String) {
             card.nextPracticeDate = trozos[8]
             card.answered = false
             return card
-        }
+        }*/
     }
 }
